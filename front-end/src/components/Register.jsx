@@ -1,3 +1,5 @@
+import Button from "./button-tab/button";
+
 export default function Register() {
   return (
     <div>
@@ -7,7 +9,7 @@ export default function Register() {
       <input type="email" placeholder="Электронная почта" required />
       <input type="password" placeholder="Пароль" maxLength={16} required />
       <input type="password" placeholder="Введите пароль снова" maxLength={16} required />
-      <button type="submit">Зарегистрироваться</button>
+      <Button type="submit">Зарегистрироваться</Button>
     </form>
     </div>
   );
