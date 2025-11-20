@@ -1,36 +1,40 @@
-import { useState } from 'react'
-import './App.css'
-import Login from './components/Login'
-import Register from './components/Register'
-import Button from './components/button-tab/button';
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Button from "./components/button-tab/button";
+import Bank from "./components/Bank"; 
 
+function Tabs() {
+  const [tab, setTab] = useState("register");
 
-export default function App() {
-  const [now, setNow] = useState(new Date())
-  const [tab, setTab] = useState('register')
-  
-
-  function handleClick(title) {
-    setTab(title)
-  }
   return (
-    <>
-      <link rel="icon" href="/kaspi.svg"></link>
-
+    <div className="auth-container">
       <div className="tabs">
-
-        <Button onClick={() => handleClick('register')} isActive={tab == 'register'}>Регистрация</Button>
-        <Button onClick={() => handleClick('login')} isActive={tab == 'login'}>Вход</Button>
-
+        <Button onClick={() => setTab("register")} isActive={tab === "register"}>
+          Регистрация
+        </Button>
+        <Button onClick={() => setTab("login")} isActive={tab === "login"}>
+          Вход
+        </Button>
       </div>
 
-      <div>
-        {tab == 'register' ? <Register /> : <Login />}
+      <div className="form-container">
+        {tab === "register" ? <Register /> : <Login />}
       </div>
-
-
-    </>
+    </div>
   );
 }
 
-
+export default function App() {
+  return (
+    <Router>
+      <link rel="icon" href="/kaspi.svg" />
+      <Routes>
+        <Route path="/" element={<Tabs />} />
+        <Route path="/bank" element={<Bank />} /> {}
+      </Routes>
+    </Router>
+  );
+}

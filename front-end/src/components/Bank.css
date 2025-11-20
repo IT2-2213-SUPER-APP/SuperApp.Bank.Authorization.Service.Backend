@@ -1,0 +1,68 @@
+.bank-container {
+  max-width: 420px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.bank-header {
+  text-align: center;
+  color: #d32f2f;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+.cards-section, .deposit-section {
+  margin-bottom: 20px;
+}
+
+.card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+  transition: 0.2s ease;
+}
+
+.card-item:hover {
+  background: #f5f5f5;
+  transform: scale(1.01);
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.card-number {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.card-balance h3 {
+  color: #222;
+  margin: 0;
+  font-weight: 600;
+}
+
+.add-card-btn {
+  width: 100%;
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.add-card-btn:hover {
+  background-color: #bbdefb;
+}
