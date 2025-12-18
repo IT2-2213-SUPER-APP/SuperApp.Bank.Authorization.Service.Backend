@@ -9,8 +9,8 @@
 ---
 
 # Запуск проекта
-docker compose up --build
+- docker compose up --build
 
 # Перезапуск
-docker compose down
-docker compose up --build
+- docker compose down
+- docker compose up --build
