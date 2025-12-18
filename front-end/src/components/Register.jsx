@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./button-tab/button";
+import Button from "./button-tab/Button";
 
 export default function Register() {
   const [form, setForm] = useState({

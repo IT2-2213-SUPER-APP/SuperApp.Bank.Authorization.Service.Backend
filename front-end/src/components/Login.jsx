@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./button-tab/button";
+import Button from "./button-tab/Button";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
@@ -28,7 +28,7 @@ export default function Login() {
 
       if (response.ok) {
         localStorage.setItem("token", data.access_token);
-        navigate("/bank"); // ✅ Переход после успешного входа
+        navigate("/bank"); 
       } else {
         alert(data.detail || "Ошибка входа");
       }

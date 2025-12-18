@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Button from "./components/button-tab/button";
+import Button from "./components/button-tab/Button";
 import Bank from "./components/Bank"; 
 
 function Tabs() {
