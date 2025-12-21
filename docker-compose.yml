@@ -6,6 +6,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: Kaspi
+    ports:
+      - "5436:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
 
@@ -14,12 +16,12 @@ services:
     depends_on:
       - db
     ports:
-      - "8000:8000"
+      - "8011:8000"
 
   frontend:
     build: ./front-end
     ports:
-      - "5173:5173"
+      - "5174:5173"
     depends_on:
       - backend
 
