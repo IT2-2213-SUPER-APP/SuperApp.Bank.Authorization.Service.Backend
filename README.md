@@ -2,7 +2,7 @@
 
 Полноценное fullstack-приложение с:
 - **Frontend**: React + Vite http://localhost:5173/
-- **Backend**: FastAPI + SQLAlchemy (async) http://localhost:8000/
+- **Backend**: FastAPI + SQLAlchemy (async) http://localhost:8000/docs
 - **Database**: PostgreSQL
 - **Контейнеризация**: Docker + Docker Compose
 
