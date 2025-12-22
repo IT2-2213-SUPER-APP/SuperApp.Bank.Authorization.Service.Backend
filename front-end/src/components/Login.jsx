@@ -28,6 +28,7 @@ export default function Login() {
 
       if (response.ok) {
         localStorage.setItem("token", data.access_token);
+        localStorage.setItem("user_id", data.id);
         navigate("/bank"); 
       } else {
         alert(data.detail || "Ошибка входа");

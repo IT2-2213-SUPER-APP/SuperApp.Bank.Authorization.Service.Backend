@@ -38,6 +38,7 @@ export default function Register() {
 
       if (response.ok) {
         const data = await response.json();
+        localStorage.setItem("user_id", data.user_id);
         alert(`Регистрация успешна! ID пользователя: ${data.user_id}`);
       } else {
         const error = await response.json();
@@ -48,13 +49,6 @@ export default function Register() {
       console.error(err);
     }
   };
-  // margin: 0;
-  // font-family: 'Open Sans', sans-serif;
-  // background: #f0f0f0;
-  // display: flex;
-  // /* align-items: center;
-  // justify-content: center; */
-  // height: 100vh;
 
   return (
     <div style={{ margin: '0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

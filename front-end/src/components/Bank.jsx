@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Bank() {
-
+  const userId = localStorage.getItem("user_id");
   const [urlToResource, setUrlToResource] = useState("");
 
   const handleSetUrlRecourse = (newUrlRecourse) => {
@@ -37,7 +37,7 @@ export default function Bank() {
           }}
         >
           <a style={buttonStyle} onClick={() => handleSetUrlRecourse('http://localhost:5173/')}>Shop</a>
-          <a style={buttonStyle} onClick={() => handleSetUrlRecourse('http://localhost:5176/')}>Bank</a>
+          <a style={buttonStyle} onClick={() => handleSetUrlRecourse(`http://localhost:5176/?user=${userId}`)}>Bank</a>
           <a style={buttonStyle}>Government</a>
           <a style={buttonStyle} onClick={() => handleSetUrlRecourse('http://localhost:5175/')}>Tracking</a>
         </div>
