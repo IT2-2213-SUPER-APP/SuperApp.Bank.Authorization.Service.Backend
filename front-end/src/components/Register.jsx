@@ -23,7 +23,7 @@ export default function Register() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/register", {
+      const response = await fetch("http://localhost:8011/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,9 +48,16 @@ export default function Register() {
       console.error(err);
     }
   };
+  // margin: 0;
+  // font-family: 'Open Sans', sans-serif;
+  // background: #f0f0f0;
+  // display: flex;
+  // /* align-items: center;
+  // justify-content: center; */
+  // height: 100vh;
 
   return (
-    <div>
+    <div style={{ margin: '0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <form id="registerform" onSubmit={handleSubmit}>
         <input
           type="text"

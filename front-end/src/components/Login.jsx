@@ -18,7 +18,7 @@ export default function Login() {
       formData.append("username", form.email);
       formData.append("password", form.password);
 
-      const response = await fetch("http://localhost:8000/token", {
+      const response = await fetch("http://localhost:8011/token", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formData.toString(),
@@ -39,7 +39,7 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div style={{ margin: '0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <form id="loginform" onSubmit={handleSubmit}>
         <input
           type="email"
