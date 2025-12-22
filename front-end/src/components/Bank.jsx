@@ -11,11 +11,11 @@ export default function Bank() {
   return (
     <div style={{ display: 'flex', flexDirection: 'row', height: '100%' }}>
       <div style={
-        { 
-          textAlign: "center", 
-          fontFamily: "'Inter', sans-serif", 
-          color: "#333", 
-          display: 'flex', 
+        {
+          textAlign: "center",
+          fontFamily: "'Inter', sans-serif",
+          color: "#333",
+          display: 'flex',
           flexDirection: 'column',
           margin: '0px 50px 0px 50px',
           paddingTop: '100px',
@@ -38,7 +38,7 @@ export default function Bank() {
         >
           <a style={buttonStyle} onClick={() => handleSetUrlRecourse('http://localhost:5173/')}>Shop</a>
           <a style={buttonStyle} onClick={() => handleSetUrlRecourse(`http://localhost:5176/?user=${userId}`)}>Bank</a>
-          <a style={buttonStyle}>Government</a>
+          <a style={buttonStyle} onClick={() => handleSetUrlRecourse(`http://localhost:5179/?user=${userId}`)}>Government</a>
           <a style={buttonStyle} onClick={() => handleSetUrlRecourse('http://localhost:5175/')}>Tracking</a>
         </div>
       </div>
