@@ -167,3 +167,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# LUCKY PROMPT
+
+main.py
+prompt.sh
+config.cfg
+out/
